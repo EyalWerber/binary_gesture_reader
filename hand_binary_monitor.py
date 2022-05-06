@@ -15,8 +15,8 @@ CONTROLLER = {0: "SLEEP", 1: "LISTEN", 2: "FUCK YOU", 3: "TWAT", 4: "", 5: "NOTH
               6: "", 7: "WAKE UP", 8: "", 9: "", 10: "", 11: "", 12: "", 13: "FUCK OFF", 14: "COME HERE", 15: "STOP"}
 
 #Open serial port
-ser = serial.Serial('COM4', 9600)
-ser.timeout =1
+# ser = serial.Serial('COM4', 9600)
+# ser.timeout =1
 
 # This fucntion make segment[0].y the origin of the hands y axis
 
@@ -44,7 +44,7 @@ def palm_or_back():
     return int(SEGMENT_POS[17].x-SEGMENT_POS[11].x > 0)
 
 
-def keyboard_GUI(interface):
+def keyboarxxxxxxd_GUI(interface):
     key = cv2.waitKey(1)
     if key == ord('x'):
         interface["open"] = False
@@ -111,17 +111,17 @@ while interface["open"] == True:
 
     hud_text(cv2,img,fps,h,w)
 
-    if finger_val != finger_2_binary():
-        finger_val= finger_2_binary()   
-        print(finger_val)
-        if finger_val == 7:
-            ser.write("on".encode())
-            print("LED ON")
-        if finger_val == 0:
-            print("LED OFF")
-            ser.write("off".encode())
+    # if finger_val != finger_2_binary():
+    #     finger_val= finger_2_binary()   
+    #     print(finger_val)
+    #     if finger_val == 7:
+    #         ser.write("on".encode())
+    #         print("LED ON")
+    #     if finger_val == 0:
+    #         print("LED OFF")
+    #         ser.write("off".encode())
 
 
     cv2.imshow("image", img)
 
-ser.close()
+# ser.close()
