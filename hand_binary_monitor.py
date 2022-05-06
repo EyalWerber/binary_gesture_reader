@@ -83,7 +83,7 @@ cap = cv2.VideoCapture(1)
 
 finger_val = ''
 while interface["open"] == True:
-    time.sleep(0.2) #this value controlls fps
+    time.sleep(0.4) #this value controlls fps
     interface = keyboard_GUI(interface)
     success, img = cap.read()
     h, w, c = img.shape
