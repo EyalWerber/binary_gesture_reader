@@ -44,7 +44,7 @@ def palm_or_back():
     return int(SEGMENT_POS[17].x-SEGMENT_POS[11].x > 0)
 
 
-def keyboarxxxxxxd_GUI(interface):
+def keyboard_GUI(interface):
     key = cv2.waitKey(1)
     if key == ord('x'):
         interface["open"] = False
