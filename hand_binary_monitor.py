@@ -12,7 +12,7 @@ interface = {"open": True, "segment": 0,
 FINGER_BIN = ["1", "1", "1", "1"]
 SEGMENT_POS = {}
 CONTROLLER = {0: "SLEEP", 1: "LISTEN", 2: "FUCK YOU", 3: "TWAT", 4: "", 5: "re",
-              6: "", 7: "WAKE UP", 8: "", 9: "", 10: "", 11: "", 12: "", 13: "FUCK OFF", 14: "COME HERE", 15: "STOP"}
+              6: "", 7: "WAKE UP", 8: "EXIT", 9: "", 10: "", 11: "", 12: "", 13: "FUCK OFF", 14: "COME HERE", 15: "STOP"}
 
 #Open serial port
 # ser = serial.Serial('COM4', 9600)
@@ -109,7 +109,7 @@ while interface["open"] == True:
     if finger_val is not finger_2_binary():
         finger_val = finger_2_binary()
         print(CONTROLLER[finger_2_binary()])
-        if finger_val == 4:
+        if finger_val == 8:
             if input("would you like to quit? (1/0)"):
                 break
 
