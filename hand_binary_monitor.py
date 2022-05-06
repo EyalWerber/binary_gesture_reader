@@ -109,7 +109,7 @@ while interface["open"] == True:
     if finger_val is not finger_2_binary():
         finger_val = finger_2_binary()
         print(CONTROLLER[finger_2_binary()])
-        if finger_val == '8':
+        if finger_val == 8:
             if input("would you like to quit? (1/0)"):
                 break
 
