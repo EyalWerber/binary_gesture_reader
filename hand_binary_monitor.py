@@ -126,6 +126,6 @@ while interface["open"] == True:
     #         ser.write("off".encode())
 
 
-    cv2.imshow("image", img)
+    # cv2.imshow("image", img)
 
 # ser.close()
