@@ -87,6 +87,7 @@ cap = cv2.VideoCapture(0)
 
 finger_val = ''
 while interface["open"] == True:
+
     time.sleep(0.2) #this value controlls fps
     interface = keyboard_GUI(interface)
     success, img = cap.read()
@@ -109,7 +110,10 @@ while interface["open"] == True:
     
 
 
-    hud_text(cv2,img,fps,h,w)
+    # hud_text(cv2,img,fps,h,w)
+    if finger_val is not finger_2_binary():
+        finger_val = finger_2_binary()
+        print(CONTROLLER[finger_2_binary()])
 
     # if finger_val != finger_2_binary():
     #     finger_val= finger_2_binary()   
