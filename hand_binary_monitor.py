@@ -82,7 +82,7 @@ hands = mpHands.Hands()
 mpDraw = mp.solutions.mediapipe.python.solutions.drawing_utils
 pTime = 0
 cTime = 0
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 
 finger_val = ''
